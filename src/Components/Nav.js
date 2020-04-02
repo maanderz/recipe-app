@@ -3,7 +3,7 @@ import "./Nav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-function Nav(props) {
+function Nav() {
   return (
     <div className="search-input-group">
       <div className="nav-items">

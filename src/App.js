@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
 
 export default function App() {
   // const [data, setTotalReactPackages] = useState("");
@@ -18,6 +19,8 @@ export default function App() {
   return (
     <div className="App">
       <Nav />
+
+      <Footer />
     </div>
   );
 }
