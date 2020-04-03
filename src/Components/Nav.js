@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Nav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-function Nav() {
+function Nav(props) {
+  const [value, setValue] = useState("");
+
   return (
     <div className="search-input-group">
       <div className="nav-items">
@@ -13,8 +15,13 @@ function Nav() {
             type="text"
             className="text-field"
             placeholder="Recipe Name ..."
+            onChange={e => setValue(e.target.value)}
           />
-          <button type="button" className="button">
+          <button
+            type="button"
+            className="button"
+            onClick={() => props.getQuery(value)}
+          >
             <FontAwesomeIcon icon={faSearch} />
           </button>
         </div>
