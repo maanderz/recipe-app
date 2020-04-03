@@ -1,3 +1,8 @@
 .test1 {
-  height: 100px;
+  height: 175px;
+  background-color: black;
+}
+
+.badge {
+  padding-top: 3.5rem;
 }
