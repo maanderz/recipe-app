@@ -5,25 +5,27 @@ function Recipe(props) {
   let query = props.query.replace(/\s/g, "+");
   const [card, setCard] = useState([]);
 
-  console.log(query);
+  console.log("query", query);
 
-  useEffect(query => {
-    // GET request using fetch inside useEffect React hook
+  useEffect(() => {
+    if (query == null || query === "") {
+      return;
+    }
+
     fetch(
       `https://api.edamam.com/search?q=${query}&app_id=${
         process.env.app_id
       }&app_key=${process.env.api_key}`
     )
-      .then(response => response.json())
-      .then(data => setCard(data));
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
-  }, []);
-
-  console.log(card);
+      .then(results => results.json())
+      .then(data => {
+        setCard(data.hits);
+      });
+  }, [query]); // useEffect will trigger whenever id is different.
 
   return (
     <div className="recipes-section">
-      {card.hits.map((recipe, index) => {
+      {card.map((recipe, index) => {
         return (
           <div key={index} className="card" style={{ width: 250 }}>
             <img
