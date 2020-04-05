@@ -15,10 +15,11 @@ function Recipe(props) {
     fetch(
       `https://api.edamam.com/search?q=${query}&app_id=${
         process.env.app_id
-      }&app_key=${process.env.api_key}`
+      }&app_key=${process.env.api_key}&from=0&to=9`
     )
       .then(results => results.json())
       .then(data => {
+        console.log(data.hits.length);
         setCard(data.hits);
       });
   }, [query]); // useEffect will trigger whenever id is different.
