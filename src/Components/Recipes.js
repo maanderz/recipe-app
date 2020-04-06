@@ -21,8 +21,6 @@ function Recipe(props) {
       });
   }, [query]); // useEffect will trigger whenever query is different.
 
-  console.log(card);
-
   return (
     <div className="recipes-section">
       {card.map((recipe, index) => {
