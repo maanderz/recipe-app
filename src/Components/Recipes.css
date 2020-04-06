@@ -24,9 +24,8 @@
   color: gray;
 }
 
-/* @media (max-width: 991.98px) {
+@media (max-width: 991.98px) {
   .recipes-section {
-    min-height: 0;
     display: block;
   }
-} */
+}

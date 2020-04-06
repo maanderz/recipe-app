@@ -21,6 +21,8 @@ function Recipe(props) {
       });
   }, [query]); // useEffect will trigger whenever query is different.
 
+  console.log(card);
+
   return (
     <div className="recipes-section">
       {card.map((recipe, index) => {
@@ -32,7 +34,7 @@ function Recipe(props) {
               alt="recipe"
             />
             <div className="card-body">
-              <a href={recipe.recipe.uri}>
+              <a href={recipe.recipe.shareAs}>
                 <h5 className="card-title">{recipe.recipe.label}</h5>
               </a>
             </div>
