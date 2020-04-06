@@ -26,11 +26,6 @@
 }
 
 @media (max-width: 991.98px) {
-  /* .search-input-group::before,
-  .search-input-group::after {
-    height: 60%;
-  } */
-
   .button,
   .text-field {
     padding: 0.5rem;

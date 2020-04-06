@@ -5,8 +5,6 @@ function Recipe(props) {
   let query = props.query.replace(/\s/g, "+");
   const [card, setCard] = useState([]);
 
-  console.log("query", query);
-
   useEffect(() => {
     if (query == null || query === "") {
       return;
@@ -19,10 +17,9 @@ function Recipe(props) {
     )
       .then(results => results.json())
       .then(data => {
-        console.log(data.hits.length);
         setCard(data.hits);
       });
-  }, [query]); // useEffect will trigger whenever id is different.
+  }, [query]); // useEffect will trigger whenever query is different.
 
   return (
     <div className="recipes-section">

@@ -12,6 +12,18 @@
   border: none;
 }
 
+.card-body a {
+  color: white;
+}
+
+.card-title {
+  color: black;
+}
+
+.card-title:hover {
+  color: gray;
+}
+
 /* @media (max-width: 991.98px) {
   .recipes-section {
     min-height: 0;
