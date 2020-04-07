@@ -1,0 +1,17 @@
+.footer {
+  height: 175px;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer-author {
+  color: white;
+  flex-basis: 100%;
+}
+
+.footer a {
+  color: white;
+}

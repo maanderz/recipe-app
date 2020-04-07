@@ -1,4 +1,7 @@
 .App {
-  font-family: sans-serif;
+  font-family: "Comic Neue";
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

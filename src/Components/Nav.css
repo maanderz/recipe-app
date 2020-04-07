@@ -1,0 +1,34 @@
+.page-title {
+  color: white;
+  padding-top: 3rem;
+}
+
+.button,
+.text-field {
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.button {
+  background-color: lightgray;
+  margin-bottom: 2rem;
+}
+
+.search-input-group {
+  background-image: 
+    /* top, transparent red */ linear-gradient(
+      rgba(20, 20, 20, 0.5),
+      rgba(20, 20, 20, 0.5)
+    ),
+    /* your image */
+      url("https://renwerks.com/wp-content/uploads/2018/09/straits-kitchen-cover3.png");
+  background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+  .button,
+  .text-field {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+}

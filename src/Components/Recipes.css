@@ -1,0 +1,31 @@
+.recipes-section {
+  background-color: white;
+  min-height: 65vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 20px;
+  margin: 100px auto;
+}
+
+.card {
+  border: none;
+}
+
+.card-body a {
+  color: white;
+}
+
+.card-title {
+  color: black;
+}
+
+.card-title:hover {
+  color: gray;
+}
+
+@media (max-width: 991.98px) {
+  .recipes-section {
+    display: block;
+  }
+}
